@@ -6,5 +6,6 @@ body{
 /*#region Ejemplo */
 .clasequenoexiste{
   color:red;
+  color : blue;
 }
 /* #endregion */
