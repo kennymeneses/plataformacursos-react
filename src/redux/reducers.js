@@ -14,6 +14,6 @@ export const teacherReducer = (state ={}, action)=>{
     return state
 }
 
-export const classReducer = (state ={}, action)=>{
+export const lessonReducer = (state ={}, action)=>{
     return state
 }
