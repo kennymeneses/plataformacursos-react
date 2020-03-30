@@ -1,4 +1,19 @@
+import { GET_ALL_POSTS } from "./actions"
+
 export const postReducer = (state ={}, action)=>{
+    if(action.type === GET_ALL_POSTS){
+        return {
+            ...state,
+            posts: action.posts
+        }
+    }
+
+    if(action.type === GET_POST){
+        return {
+            ...state,
+            post
+        }
+    }
     return state
 }
 
