@@ -1,8 +1,12 @@
 import { GET_ALL_POSTS, GET_ALL_SPECIALITIES, GET_ALL_COURSES, GET_ALL_TEACHERS,
          GET_POST, GET_SPECIALITY, GET_LESSON, GET_COURSE } from "./actions"
 
+const params = { 
+                method:'GET',
+                cache:'default'};
+
 export const getAllPosts = () => dispatch => {
-    fetch(`http://localhost:5000/posts`).then(
+    fetch(`http://localhost:5000/posts`,params).then(response=>{return response.json()}).then(
             response=>{
                 return dispatch({
                     type: GET_ALL_POSTS,
@@ -12,7 +16,7 @@ export const getAllPosts = () => dispatch => {
 }
 
 export const getAllSpecialities = () => dispatch => {
-    fetch(`http://localhost:5000/especialidades`).then(
+    fetch(`http://localhost:5000/especialidades`,params).then(response=>{return response.json()}).then(
             response=>{
                 return dispatch({
                     type: GET_ALL_SPECIALITIES,
@@ -22,7 +26,7 @@ export const getAllSpecialities = () => dispatch => {
 }
 
 export const getAllCourses = () => dispatch => {
-    fetch(`http://localhost:5000/cursos`).then(
+    fetch(`http://localhost:5000/cursos`,params).then(response=>{return response.json()}).then(
             response=>{
                 return dispatch({
                     type: GET_ALL_COURSES,
@@ -32,7 +36,7 @@ export const getAllCourses = () => dispatch => {
 }
 
 export const getAllTeachers = () => dispatch => {
-    fetch(`http://localhost:5000/profesores`).then(
+    fetch(`http://localhost:5000/profesores`,params).then(response=>{return response.json()}).then(
             response=>{
                 return dispatch({
                     type: GET_ALL_TEACHERS,
@@ -44,7 +48,7 @@ export const getAllTeachers = () => dispatch => {
 
 
 export const getPost = (id) => dispatch => {
-    fetch(`http://localhost:5000/posts/${id}`).then(
+    fetch(`http://localhost:5000/posts/${id}`,params).then(response=>{return response.json()}).then(
             response=>{
                 return dispatch({
                     type: GET_POST,
@@ -53,8 +57,8 @@ export const getPost = (id) => dispatch => {
     })
 }
 
-export const getSpeciality = (id) => dispatch => {
-    fetch(`http://localhost:5000/especialidades/${id}`).then(
+export const getSpeciality = id => dispatch => {
+    fetch(`http://localhost:5000/especialidades/${id}`,params).then(response=>{return response.json()}).then(
             response=>{
                 return dispatch({
                     type: GET_SPECIALITY,
@@ -63,8 +67,8 @@ export const getSpeciality = (id) => dispatch => {
     })
 }
 
-export const getCourse = (id) => dispatch => {
-    fetch(`http://localhost:5000/cursos/${id}`).then(
+export const getCourse = id => dispatch => {
+    fetch(`http://localhost:5000/cursos/${id}`,params).then(response=>{return response.json()}).then(
             response=>{
                 return dispatch({
                     type: GET_COURSE,
@@ -73,8 +77,8 @@ export const getCourse = (id) => dispatch => {
     })
 }
 
-export const getLesson = (id) => dispatch => {
-    fetch(`http://localhost:5000/clases/${id}`).then(
+export const getLesson = id => dispatch => {
+    fetch(`http://localhost:5000/clases/${id}`,params).then(response=>{return response.json()}).then(
             response=>{
                 return dispatch({
                     type: GET_LESSON,

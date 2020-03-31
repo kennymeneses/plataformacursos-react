@@ -1,6 +1,7 @@
-import { GET_ALL_POSTS } from "./actions"
+import { GET_ALL_POSTS, GET_ALL_SPECIALITIES, GET_ALL_COURSES, GET_ALL_TEACHERS,
+    GET_POST, GET_SPECIALITY, GET_LESSON, GET_COURSE } from "./actions"
 
-export const postReducer = (state ={}, action)=>{
+export const postReducer = (state = {}, action) => {
     if(action.type === GET_ALL_POSTS){
         return {
             ...state,
@@ -11,24 +12,63 @@ export const postReducer = (state ={}, action)=>{
     if(action.type === GET_POST){
         return {
             ...state,
-            post
+            post: action.post
         }
     }
     return state
 }
 
-export const specialityReducer = (state ={}, action)=>{
+export const specialityReducer = (state = {}, action) => {
+    if(action.type === GET_ALL_SPECIALITIES){
+        return {
+            ...state,
+            specialities: action.specialities
+        }
+    }
+
+    if(action.type === GET_SPECIALITY)
+        return {
+            ...state,
+            speciality: action.speciality
+        }
+
     return state
 }
 
-export const courseReducer = (state ={}, action)=>{
+export const courseReducer = (state = {}, action) => {
+    if (action.type === GET_ALL_COURSES){
+        return {
+            ...state,
+            courses: action.courses
+        }
+    }
+    if (action.type === GET_COURSE){
+        return {
+            ...state,
+            course: action.course
+        }
+    }
+
     return state
 }
 
-export const teacherReducer = (state ={}, action)=>{
+export const teacherReducer = (state = {}, action) => {
+    if(action.type === GET_ALL_TEACHERS){
+        return {
+            ...state,
+            teachers: action.teachers
+        }
+    }
+
     return state
 }
 
-export const lessonReducer = (state ={}, action)=>{
+export const lessonReducer = (state = {}, action) => {
+    if (action.type === GET_LESSON){
+        return {
+            ...state,
+            lesson: action.lesson
+        }
+    }
     return state
 }
