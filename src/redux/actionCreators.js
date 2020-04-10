@@ -86,3 +86,15 @@ export const getLesson = id => dispatch => {
         })
     })
 }
+
+export const ModStyleElemnt = (object) =>{
+    if(object.style.left != "0px")
+    {
+        object.style.left="0px"
+    }
+    else
+    {
+        object.style.left="-30vw"
+    }
+    
+}
