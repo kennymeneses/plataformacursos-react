@@ -16,10 +16,12 @@ const App = ()=>(
   <Router>
       <Header />
       <Switch>
-        <Public path="/" exact component={Home}/>
+        <Route path="/" exact component={Home}/>
+        {/* <Public path="/" exact component={Home}/> */}
         <Public path="/login" exact component={Login}/>
         <Public path="/registro"exact component={Register}/>
         
+        {/* <Protected path="/" exact component={Home}/> */}
         <Protected path="/especialidades" component={Specialities}/>
         <Protected path="/cursos" component={Courses}/>
         <Protected path="/profesores" component={Teachers}/>

@@ -88,7 +88,7 @@ export const getLesson = id => dispatch => {
 }
 
 export const ModStyleElemnt = (object) =>{
-    if(object.style.left != "0px")
+    if(object.style.left !== "0px")
     {
         object.style.left="0px"
     }
@@ -97,4 +97,9 @@ export const ModStyleElemnt = (object) =>{
         object.style.left="-30vw"
     }
     
+}
+
+export const Error_message = (message) =>{
+
+    return message
 }

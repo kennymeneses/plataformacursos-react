@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const removeToken = ()=>{
     localStorage.removeItem('token')
-    window.location= "/login"
+    window.location= "/"
 }
 
 const PrivateMenu = () =>{
